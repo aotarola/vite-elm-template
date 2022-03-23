@@ -4,6 +4,10 @@
   "description": "A staring template for building Elm apps with Vite",
   "version": "1.1.1",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aotarola/vite-elm-template"
+  },
   "scripts": {
     "postinstall": "elm-tooling install",
     "dev": "vite",
