@@ -1,0 +1,25 @@
+{
+  "extends": "groupon",
+  "overrides": [
+    {
+      "files": "*.js",
+      "env": {
+        "browser": true
+      },
+      "rules": {
+        "node/no-unsupported-features/es-syntax": [
+          "error",
+          {
+            "ignores": [
+              "modules"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
+}
