@@ -1,7 +1,6 @@
 module HelloWorldSpec exposing (..)
 
-import HelloWorld exposing (helloWorld)
-import Msg
+import Main exposing (Msg(..), helloWorld)
 import Test exposing (Test)
 import Test.Html.Event as Event
 import Test.Html.Query as Query
@@ -22,5 +21,5 @@ suite =
                     |> Query.fromHtml
                     |> Query.find [ Html.tag "button", Html.containing [ Html.text "count" ] ]
                     |> Event.simulate Event.click
-                    |> Event.expect Msg.Increment
+                    |> Event.expect Increment
         ]
