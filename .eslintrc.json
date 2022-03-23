@@ -16,6 +16,20 @@
           }
         ]
       }
+    },
+    {
+      "files": [
+        "vite.config.js"
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ],
+        "node/no-unpublished-import": "off"
+      }
     }
   ],
   "parserOptions": {
