@@ -6,9 +6,39 @@ import Html.Attributes exposing (href, src, style)
 import Html.Events exposing (..)
 
 
+
+-- Messages
+
+
 type Msg
     = Increment
     | Decrement
+
+
+
+-- Update
+
+
+update : Msg -> number -> number
+update msg model =
+    case msg of
+        Increment ->
+            model + 1
+
+        Decrement ->
+            model - 1
+
+
+
+-- Views
+
+
+view : Int -> Html Msg
+view model =
+    div []
+        [ img [ src "/logo.png", style "width" "300px" ] []
+        , helloWorld model
+        ]
 
 
 helloWorld : Int -> Html Msg
@@ -32,21 +62,3 @@ helloWorld model =
 main : Program () Int Msg
 main =
     Browser.sandbox { init = 0, update = update, view = view }
-
-
-update : Msg -> number -> number
-update msg model =
-    case msg of
-        Increment ->
-            model + 1
-
-        Decrement ->
-            model - 1
-
-
-view : Int -> Html Msg
-view model =
-    div []
-        [ img [ src "/logo.png", style "width" "300px" ] []
-        , helloWorld model
-        ]
