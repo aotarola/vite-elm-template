@@ -15,18 +15,23 @@ type Msg
     | Decrement
 
 
+init : () -> ( Int, Cmd Msg )
+init _ =
+    ( 0, Cmd.none )
+
+
 
 -- Update
 
 
-update : Msg -> number -> number
+update : Msg -> number -> ( number, Cmd msg )
 update msg model =
     case msg of
         Increment ->
-            model + 1
+            ( model + 1, Cmd.none )
 
         Decrement ->
-            model - 1
+            ( model - 1, Cmd.none )
 
 
 
@@ -61,4 +66,9 @@ helloWorld model =
 
 main : Program () Int Msg
 main =
-    Browser.sandbox { init = 0, update = update, view = view }
+    Browser.element
+        { init = init
+        , update = update
+        , view = view
+        , subscriptions = always Sub.none
+        }
