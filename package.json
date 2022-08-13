@@ -16,6 +16,7 @@
     "serve": "vite preview",
     "test": "npm-run-all lint:* test:*",
     "lint:js": "eslint .",
+    "lint:elm-review": "elm-review",
     "test:elm": "elm-test-rs"
   },
   "devDependencies": {
