@@ -3,7 +3,9 @@
   "overrides": [
     {
       "files": [
-        "vite.config.ts"
+        "vite.config.ts",
+        "playwright.config.ts",
+        "tests/**/*.ts"
       ],
       "rules": {
         "import/no-extraneous-dependencies": [
