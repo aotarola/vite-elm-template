@@ -3,7 +3,7 @@
   "overrides": [
     {
       "files": [
-        "vite.config.js"
+        "vite.config.ts"
       ],
       "rules": {
         "import/no-extraneous-dependencies": [
