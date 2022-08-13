@@ -4,6 +4,7 @@ import Browser
 import Html exposing (Html, a, button, code, div, h1, img, p, text)
 import Html.Attributes exposing (href, src, style)
 import Html.Events exposing (..)
+import VitePluginHelper exposing (asset)
 
 
 
@@ -41,7 +42,7 @@ update msg model =
 view : Int -> Html Msg
 view model =
     div []
-        [ img [ src "/logo.png", style "width" "300px" ] []
+        [ img [ src <| asset "/logo.png", style "width" "300px" ] []
         , helloWorld model
         ]
 

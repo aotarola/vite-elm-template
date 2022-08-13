@@ -4,4 +4,4 @@ import { Elm } from './src/Main.elm';
 
 const root = document.querySelector('#app div');
 
-Elm.Main.init({ node: root });
+Elm.Main.init({ node: root || undefined });

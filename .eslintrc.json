@@ -1,22 +1,6 @@
 {
-  "extends": "groupon",
+  "extends": "groupon/typescript",
   "overrides": [
-    {
-      "files": "*.js",
-      "env": {
-        "browser": true
-      },
-      "rules": {
-        "node/no-unsupported-features/es-syntax": [
-          "error",
-          {
-            "ignores": [
-              "modules"
-            ]
-          }
-        ]
-      }
-    },
     {
       "files": [
         "vite.config.js"
@@ -32,8 +16,5 @@
       }
     }
   ],
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module"
-  }
+  "root": true
 }
