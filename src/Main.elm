@@ -3,7 +3,7 @@ module Main exposing (Msg(..), helloWorld, main)
 import Browser
 import Html exposing (Html, a, button, code, div, h1, img, p, text)
 import Html.Attributes exposing (href, src, style)
-import Html.Events exposing (..)
+import Html.Events exposing (onClick)
 import VitePluginHelper exposing (asset)
 
 
@@ -13,7 +13,6 @@ import VitePluginHelper exposing (asset)
 
 type Msg
     = Increment
-    | Decrement
 
 
 init : () -> ( Int, Cmd Msg )
@@ -26,13 +25,8 @@ init _ =
 
 
 update : Msg -> number -> ( number, Cmd msg )
-update msg model =
-    case msg of
-        Increment ->
-            ( model + 1, Cmd.none )
-
-        Decrement ->
-            ( model - 1, Cmd.none )
+update _ model =
+    ( model + 1, Cmd.none )
 
 
 
